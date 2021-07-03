@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace LogisticsEfficiencyProblem
     public class TestEfficiency
     {
 
-        EfficiencyManager efficiencyManager;
+        private EfficiencyManager efficiencyManager;
 
         [TestInitialize]
         public void Initialize()
@@ -33,7 +33,7 @@ namespace LogisticsEfficiencyProblem
             var truckSize = 1;
 
             var expected = 0;
-            Assert.AreEqual(expected, this.efficiencyManager.FindProductMaximumOnTruck(numBoxes, 
+            Assert.AreEqual(expected, this.efficiencyManager.FindProductMaximumOnTruck(numBoxes,
                 boxCountOfEachProduct, productTypeCount, productCountPerBox, truckSize));
         }
 
