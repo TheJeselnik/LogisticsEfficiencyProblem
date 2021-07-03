@@ -26,6 +26,11 @@ namespace LogisticsEfficiencyProblem
 
             var sortedBoxes = boxes.OrderByDescending(sortedBox => sortedBox.ProductsInside).ToList();
 
+            if (sortedBoxes.Count < 1)
+            {
+                return maxProduct;
+            }
+
             for (var k = 0; k < truckSize; k++)
             {
                 maxProduct += sortedBoxes[k].ProductsInside;
